@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory-50 text-black font-sans;
+  font-feature-settings: 'kern' 1;
+}
+
+/* Luxury Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-semibold tracking-luxury;
+}
+
+h1 {
+  @apply text-luxury-5xl leading-tight;
+}
+
+h2 {
+  @apply text-luxury-4xl leading-tight;
+}
+
+h3 {
+  @apply text-luxury-3xl;
+}
+
+h4 {
+  @apply text-luxury-2xl;
+}
+
+h5 {
+  @apply text-luxury-xl;
+}
+
+h6 {
+  @apply text-luxury-lg;
+}
+
+p {
+  @apply text-luxury-base leading-relaxed;
+}
+
+/* Smooth transitions */
+a, button {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ivory-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-champagne-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-champagne-500;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-champagne-200 text-black;
+}
+
+/* Input focus styling */
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-1 ring-champagne-400;
+}
+
+/* Animation utilities */
+@layer components {
+  .luxury-section {
+    @apply py-luxury-4xl md:py-luxury-4xl px-luxury-lg md:px-luxury-2xl max-w-7xl mx-auto;
+  }
+
+  .luxury-heading {
+    @apply font-display font-semibold tracking-luxury text-luxury-4xl md:text-luxury-5xl text-center mb-luxury-3xl;
+  }
+
+  .luxury-subheading {
+    @apply font-display text-luxury-xl md:text-luxury-2xl text-center text-warm-beige-700 mb-luxury-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-ivory-900 via-champagne-700 to-warm-beige-800 bg-clip-text text-transparent;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl;
+  }
+
+  .btn-luxury {
+    @apply px-luxury-lg py-luxury-sm bg-black text-ivory-50 rounded-none font-medium tracking-luxury transition-all duration-300 hover:bg-warm-beige-900 active:scale-95;
+  }
+
+  .btn-luxury-secondary {
+    @apply px-luxury-lg py-luxury-sm bg-transparent border border-black text-black rounded-none font-medium tracking-luxury transition-all duration-300 hover:bg-black hover:text-ivory-50;
+  }
+
+  .btn-luxury-gold {
+    @apply px-luxury-lg py-luxury-sm bg-champagne-500 text-black rounded-none font-medium tracking-luxury transition-all duration-300 hover:bg-champagne-600;
+  }
+
+  .input-luxury {
+    @apply w-full px-luxury-md py-luxury-sm bg-ivory-100 border border-ivory-200 text-black rounded-none placeholder-warm-beige-600 focus:border-champagne-400 focus:bg-white transition-all duration-300;
+  }
+
+  .link-luxury {
+    @apply text-black underline decoration-champagne-500 underline-offset-2 transition-all duration-300 hover:text-champagne-600 hover:decoration-champagne-600;
+  }
+}
