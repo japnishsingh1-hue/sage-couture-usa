@@ -10,38 +10,40 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-2xl font-bold mb-4">
-              SAGE
-              <br />
-              <span className="text-champagne-400">COUTURE</span>
-            </h3>
+            <img
+              src="https://sagecouture.in/cdn/shop/files/sage-colored-logo.png?v=1694778001&width=150"
+              alt="SAGE COUTURE"
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-sm text-ivory-300 leading-relaxed">
-              Curating India's finest luxury designers for the discerning customer.
+              Haute couture, bridal trousseau & ready-to-wear.
+              <br />
+              Established 2017
             </p>
           </div>
 
           {/* Shop */}
           <div>
-            <h4 className="font-semibold font-display mb-4">Shop</h4>
+            <h4 className="font-semibold font-display mb-4">Collections</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/shop/women" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  Women
+                <Link href="/shop/lehengas" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  Lehengas
                 </Link>
               </li>
               <li>
-                <Link href="/shop/men" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  Men
+                <Link href="/shop/indo-western" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  Indo Western
                 </Link>
               </li>
               <li>
-                <Link href="/designers" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  Designers
+                <Link href="/shop/drapes" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  Drapes & Sarees
                 </Link>
               </li>
               <li>
-                <Link href="/shop?occasion=wedding" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  Wedding
+                <Link href="/shop/mens-wear" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  Mens Wear
                 </Link>
               </li>
             </ul>
@@ -80,22 +82,22 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-champagne-400" />
-                <a href="mailto:hello@sagecouture.com" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  hello@sagecouture.com
+                <a href="mailto:contact@sagecouture.in" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  contact@sagecouture.in
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-champagne-400" />
-                <a href="tel:+1234567890" className="text-ivory-300 hover:text-champagne-400 transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+12169030029" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+                  +1 (216) 903-0029
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-champagne-400 mt-1 flex-shrink-0" />
                 <span className="text-ivory-300">
-                  New York, NY
+                  India
                   <br />
-                  United States
+                  24/7 Customer Support
                 </span>
               </li>
             </ul>
@@ -106,13 +108,13 @@ export default function Footer() {
         <div className="border-t border-ivory-900 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center gap-4 mb-4 md:mb-0">
-              <a href="#" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+              <a href="https://instagram.com/sage_couture" target="_blank" rel="noopener noreferrer" className="text-ivory-300 hover:text-champagne-400 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+              <a href="https://sagecouture.in" target="_blank" rel="noopener noreferrer" className="text-ivory-300 hover:text-champagne-400 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-ivory-300 hover:text-champagne-400 transition-colors">
+              <a href="https://sagecouture.in" target="_blank" rel="noopener noreferrer" className="text-ivory-300 hover:text-champagne-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>

@@ -2,12 +2,13 @@
 
 import { motion } from 'framer-motion'
 import ProductCard from '@/components/products/ProductCard'
+import { getProductImageUrl } from '@/lib/images'
 
 const trendingProducts = [
-  { id: '5', name: 'Bridal Lehenga Set', designer: 'Sabyasachi', price: 4500, mrp: 6000, image: '/images/products/trending1.jpg' },
-  { id: '6', name: 'Party Wear Saree', designer: 'Manish Malhotra', price: 2200, mrp: 3200, image: '/images/products/trending2.jpg' },
-  { id: '7', name: 'Designer Sharara', designer: 'Tarun Tahiliani', price: 3000, mrp: 4200, image: '/images/products/trending3.jpg' },
-  { id: '8', name: 'Anarkali Suit', designer: 'Anita Dongre', price: 1600, mrp: 2400, image: '/images/products/trending4.jpg' },
+  { id: '5', name: 'Bridal Lehenga Set', designer: 'SAGE COUTURE', price: 22000, mrp: 42000, image: getProductImageUrl('Bridal Lehenga Set', 'Lehengas', 0) },
+  { id: '6', name: 'Party Wear Saree', designer: 'SAGE COUTURE', price: 16000, mrp: 32000, image: getProductImageUrl('Party Wear Saree', 'Drapes', 0) },
+  { id: '7', name: 'Designer Sharara', designer: 'SAGE COUTURE', price: 18000, mrp: 30000, image: getProductImageUrl('Designer Sharara', 'Indo Western', 0) },
+  { id: '8', name: 'Anarkali Suit', designer: 'SAGE COUTURE', price: 12000, mrp: 24000, image: getProductImageUrl('Anarkali Suit', 'Suits', 0) },
 ]
 
 export default function TrendingNow() {

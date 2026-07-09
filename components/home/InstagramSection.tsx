@@ -11,7 +11,7 @@ export default function InstagramSection() {
     <section className="luxury-section py-24">
       <div className="text-center mb-16">
         <h2 className="luxury-heading">Follow Us</h2>
-        <p className="luxury-subheading">@sagecoutureusa</p>
+        <p className="luxury-subheading">@sage_couture</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -33,13 +33,13 @@ export default function InstagramSection() {
 
       <div className="text-center mt-12">
         <Link
-          href="https://instagram.com"
+          href="https://instagram.com/sage_couture"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-luxury-gold px-8 py-3 inline-flex items-center gap-2"
         >
           <Instagram className="w-4 h-4" />
-          Follow on Instagram
+          Follow @sage_couture
         </Link>
       </div>
     </section>

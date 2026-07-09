@@ -34,10 +34,10 @@ export default function Hero() {
           animate="visible"
         >
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight">
-            Discover India's
+            Premium Indian
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-champagne-600 via-warm-beige-700 to-champagne-600">
-              Finest Designers
+              Luxury Fashion
             </span>
           </motion.h1>
 
@@ -45,7 +45,9 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl text-warm-beige-800 max-w-2xl mx-auto font-light"
           >
-            Curated collections from India's most prestigious luxury designers, now available exclusively in the USA.
+            Exquisite bridal collections, indo-western fusion, and haute couture exclusively for you.
+            <br />
+            <span className="text-champagne-600 font-semibold">Free Pan-USA Shipping • 24/7 Support</span>
           </motion.p>
 
           <motion.div
@@ -53,22 +55,22 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
           >
             <Link
-              href="/shop/women"
+              href="/shop/lehengas"
               className="btn-luxury bg-black text-ivory-50 px-8 py-4 text-lg font-semibold hover:bg-warm-beige-900 transition-all duration-300"
             >
-              Shop Women
+              Shop Lehengas
             </Link>
             <Link
-              href="/shop/men"
+              href="/shop/indo-western"
               className="btn-luxury-secondary border-2 border-black px-8 py-4 text-lg font-semibold hover:bg-black hover:text-ivory-50 transition-all duration-300"
             >
-              Shop Men
+              Indo Western
             </Link>
             <Link
-              href="/styling-appointments"
+              href="/shop"
               className="btn-luxury-gold px-8 py-4 text-lg font-semibold hover:bg-champagne-600 transition-all duration-300"
             >
-              Book Styling Appointment
+              Flat 50% Off Sale
             </Link>
           </motion.div>
 

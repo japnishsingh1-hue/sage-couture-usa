@@ -1,62 +1,71 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Metadata } from 'next'
-import FilterSidebar from '@/components/shop/FilterSidebar'
-import ProductGrid from '@/components/shop/ProductGrid'
-import SortDropdown from '@/components/shop/SortDropdown'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+
+const categories = [
+  { name: 'Lehengas', href: '/shop/lehengas', description: 'Bridal & Festive' },
+  { name: 'Indo Western', href: '/shop/indo-western', description: 'Fusion Fashion' },
+  { name: 'Mens Wear', href: '/shop/mens-wear', description: 'For Him' },
+  { name: 'Suits', href: '/shop/suits', description: 'Ethnic Elegance' },
+  { name: 'Co-ord Sets', href: '/shop/coord-sets', description: 'Ready to Wear' },
+  { name: 'Drapes & Sarees', href: '/shop/drapes', description: 'Traditional' },
+  { name: 'Gowns', href: '/shop/gowns', description: 'Evening Wear' },
+]
 
 export default function ShopPage() {
-  const [filters, setFilters] = useState({})
-  const [sortBy, setSortBy] = useState('newest')
-  const [products, setProducts] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate API call - replace with actual Supabase call
-    setIsLoading(true)
-    setTimeout(() => {
-      setProducts(
-        Array(20).fill(null).map((_, i) => ({
-          id: `${i + 1}`,
-          name: `Designer Product ${i + 1}`,
-          designer: 'Designer Name',
-          price: Math.random() * 4000 + 500,
-          mrp: Math.random() * 5000 + 1500,
-          image: `/images/products/product${(i % 4) + 1}.jpg`,
-          category: ['Women', 'Men'][Math.floor(Math.random() * 2)],
-          occasion: ['Wedding', 'Party', 'Casual'][Math.floor(Math.random() * 3)],
-        }))
-      )
-      setIsLoading(false)
-    }, 500)
-  }, [filters, sortBy])
-
   return (
-    <div className="min-h-screen bg-ivory-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <h1 className="font-display text-4xl font-bold mb-8">Shop</h1>
+    <div className="min-h-screen bg-ivory-50 py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="font-display text-5xl font-bold mb-4">Shop SAGE COUTURE</h1>
+          <p className="text-lg text-warm-beige-700">Browse our exclusive collections</p>
+        </div>
 
-        <div className="flex gap-8">
-          {/* Sidebar */}
-          <FilterSidebar onFiltersChange={setFilters} />
+        {/* Promotion Banner */}
+        <div className="bg-black text-ivory-50 p-8 rounded-lg mb-16 text-center">
+          <h2 className="font-display text-3xl font-bold mb-2">FLAT 50% OFF</h2>
+          <p>Limited time offer on selected items!</p>
+        </div>
 
-          {/* Main Content */}
-          <div className="flex-1">
-            <div className="flex justify-between items-center mb-8 pb-6 border-b border-warm-beige-200">
-              <p className="text-sm text-warm-beige-700">
-                Showing {products.length} products
-              </p>
-              <SortDropdown value={sortBy} onChange={setSortBy} />
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {categories.map((cat, idx) => (
+            <motion.div
+              key={cat.href}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Link href={cat.href}>
+                <div className="bg-white p-8 rounded-lg text-center hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-champagne-200 to-warm-beige-300 rounded-full mx-auto mb-4 group-hover:from-champagne-300 group-hover:to-warm-beige-400 transition-all"></div>
+                  <h3 className="font-display text-2xl font-bold mb-2">{cat.name}</h3>
+                  <p className="text-sm text-warm-beige-700">{cat.description}</p>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Info Section */}
+        <div className="bg-white p-8 rounded-lg text-center">
+          <h2 className="font-display text-2xl font-bold mb-4">Why SAGE COUTURE?</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+              <p className="font-bold mb-2">🚚 Free Pan-India Shipping</p>
+              <p className="text-warm-beige-700">On all orders</p>
             </div>
-
-            {isLoading ? (
-              <div className="flex items-center justify-center py-20">
-                <p className="text-warm-beige-600">Loading products...</p>
-              </div>
-            ) : (
-              <ProductGrid products={products} />
-            )}
+            <div>
+              <p className="font-bold mb-2">💬 24/7 Support</p>
+              <p className="text-warm-beige-700">We're always here to help</p>
+            </div>
+            <div>
+              <p className="font-bold mb-2">🔒 Secure Payment</p>
+              <p className="text-warm-beige-700">Safe transactions</p>
+            </div>
           </div>
         </div>
       </div>

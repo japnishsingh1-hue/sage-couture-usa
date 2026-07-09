@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion'
 import ProductCard from '@/components/products/ProductCard'
+import { getProductImageUrl } from '@/lib/images'
 
 const celebProducts = [
-  { id: '9', name: 'Red Carpet Gown', designer: 'Manish Malhotra', price: 3500, image: '/images/products/celeb1.jpg' },
-  { id: '10', name: 'Statement Lehenga', designer: 'Sabyasachi', price: 4000, image: '/images/products/celeb2.jpg' },
+  { id: '9', name: 'Red Carpet Gown', designer: 'SAGE COUTURE', price: 35000, mrp: 60000, image: getProductImageUrl('Red Carpet Gown', 'Gowns', 0) },
+  { id: '10', name: 'Statement Lehenga', designer: 'SAGE COUTURE', price: 25000, mrp: 45000, image: getProductImageUrl('Statement Lehenga', 'Lehengas', 0) },
 ]
 
 export default function CelebInspired() {

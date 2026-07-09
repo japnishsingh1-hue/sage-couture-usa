@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X, Search, Heart, User, ShoppingBag } from 'lucide-react'
 import { useCart } from '@/store/cart'
@@ -25,14 +26,14 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { label: 'Women', href: '/shop/women' },
-    { label: 'Men', href: '/shop/men' },
-    { label: 'Designers', href: '/designers' },
-    { label: 'Wedding', href: '/shop?occasion=wedding' },
-    { label: 'New Arrivals', href: '/shop?sort=newest' },
-    { label: 'Ready To Ship', href: '/shop?delivery=fast' },
-    { label: 'Sale', href: '/shop?sale=true' },
-    { label: 'Appointments', href: '/styling-appointments' },
+    { label: 'Lehengas', href: '/shop/lehengas' },
+    { label: 'Indo Western', href: '/shop/indo-western' },
+    { label: 'Mens Wear', href: '/shop/mens-wear' },
+    { label: 'Suits', href: '/shop/suits' },
+    { label: 'Co-ord Sets', href: '/shop/coord-sets' },
+    { label: 'Drapes', href: '/shop/drapes' },
+    { label: 'Gowns', href: '/shop/gowns' },
+    { label: 'Sale - 50% Off', href: '/shop?sale=true' },
   ]
 
   return (
@@ -44,12 +45,12 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <div className="font-display text-2xl font-bold text-black">
-              SAGE
-              <br className="hidden md:block" />
-              <span className="text-champagne-600">COUTURE</span>
-            </div>
+          <Link href="/" className="flex-shrink-0 flex items-center gap-2">
+            <img
+              src="https://sagecouture.in/cdn/shop/files/sage-colored-logo.png?v=1694778001&width=150"
+              alt="SAGE COUTURE"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

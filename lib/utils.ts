@@ -3,10 +3,12 @@ export function cn(...classes: (string | undefined | false)[]): string {
 }
 
 export const formatPrice = (price: number): string => {
+  // Convert INR to USD (approximate 1 INR = 0.012 USD)
+  const priceInUSD = price * 0.012
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-  }).format(price)
+  }).format(priceInUSD)
 }
 
 export const formatDate = (date: string | Date): string => {

@@ -3,39 +3,40 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import ProductCard from '@/components/products/ProductCard'
+import { getProductImageUrl } from '@/lib/images'
 
 const newProducts = [
   {
     id: '1',
-    name: 'Embroidered Lehenga',
-    designer: 'Tarun Tahiliani',
-    price: 2500,
-    mrp: 3500,
-    image: '/images/products/product1.jpg',
+    name: 'Lehnga With Cape',
+    designer: 'SAGE COUTURE',
+    price: 16000,
+    mrp: 32000,
+    image: getProductImageUrl('Lehnga With Cape', 'Lehengas', 0),
   },
   {
     id: '2',
-    name: 'Silk Saree',
-    designer: 'Sabyasachi',
-    price: 1800,
-    mrp: 2400,
-    image: '/images/products/product2.jpg',
+    name: 'Printed Blazer with Sharara',
+    designer: 'SAGE COUTURE',
+    price: 16000,
+    mrp: 32000,
+    image: getProductImageUrl('Printed Blazer with Sharara', 'Indo Western', 0),
   },
   {
     id: '3',
-    name: 'Designer Kurta',
-    designer: 'Anita Dongre',
-    price: 950,
-    mrp: 1400,
-    image: '/images/products/product3.jpg',
+    name: 'Multicolour Cape Lehnga Set',
+    designer: 'SAGE COUTURE',
+    price: 12500,
+    mrp: 25000,
+    image: getProductImageUrl('Multicolour Cape Lehnga Set', 'Lehengas', 1),
   },
   {
     id: '4',
-    name: 'Fusion Jacket',
-    designer: 'Manish Malhotra',
-    price: 1200,
-    mrp: 1800,
-    image: '/images/products/product4.jpg',
+    name: 'Hand-Embroidered Drape Saree',
+    designer: 'SAGE COUTURE',
+    price: 21000,
+    mrp: 42000,
+    image: getProductImageUrl('Hand-Embroidered Drape Saree', 'Drapes', 0),
   },
 ]
 

@@ -1,34 +1,34 @@
 import { Metadata } from 'next'
 import Hero from '@/components/home/Hero'
-import FeaturedDesigners from '@/components/home/FeaturedDesigners'
+import Posters from '@/components/home/Posters'
 import NewArrivals from '@/components/home/NewArrivals'
 import TrendingNow from '@/components/home/TrendingNow'
 import WeddingEdit from '@/components/home/WeddingEdit'
 import LuxuryPret from '@/components/home/LuxuryPret'
+import InstagramFeed from '@/components/home/InstagramFeed'
+import Reviews from '@/components/home/Reviews'
 import CelebInspired from '@/components/home/CelebInspired'
 import Exclusives from '@/components/home/Exclusives'
-import Testimonials from '@/components/home/Testimonials'
-import InstagramSection from '@/components/home/InstagramSection'
 
 export const metadata: Metadata = {
-  title: 'SAGE COUTURE USA - Luxury Indian Fashion Marketplace',
+  title: 'SAGE COUTURE - Premium Indian Fashion & Luxury Wear',
   description:
-    'Discover India\'s finest designers at SAGE COUTURE USA. Premium multi-designer marketplace for luxury Indian fashion.',
+    'Discover exquisite Indian haute couture, bridal collections, and designer wear. Premium quality, fast shipping, 24/7 support.',
 }
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <FeaturedDesigners />
+      <Posters />
       <NewArrivals />
       <TrendingNow />
       <WeddingEdit />
       <LuxuryPret />
       <CelebInspired />
+      <InstagramFeed />
+      <Reviews />
       <Exclusives />
-      <Testimonials />
-      <InstagramSection />
     </>
   )
 }
