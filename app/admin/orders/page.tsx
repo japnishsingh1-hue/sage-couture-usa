@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronLeft, Eye, MoreVertical } from 'lucide-react'
+import { ChevronLeft, Eye } from 'lucide-react'
 
 interface Order {
   id: string
